@@ -9,3 +9,4 @@
 ## 本次提交git
 
 - 成功ssh
+- 试试sourcetree
