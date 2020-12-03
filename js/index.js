@@ -21,6 +21,8 @@ function start() {
   restAlertSuccess.innerHTML = "时间到休息一下吧!";
   alertShowSuccess.style.display = "none";
   alertShowWarning.style.display = "none";
+  restMinute = 5;
+  restSecond = 60;
   clearInterval(timing);
   timing = setInterval(() => {
     second++;
@@ -59,6 +61,8 @@ function handleRest() {
   rest.style.display = "none";
   let restSpanMinute = document.getElementsByClassName("rest-span-class")[0];
   let restSpanSecond = document.getElementsByClassName("rest-span-class")[2];
+  //因为是倒计时 分钟数先减去1
+  restMinute--
   resTtiming = setInterval(() => {
     restSecond--;
     if (restMinute <= 0 && restSecond <= 0) {
