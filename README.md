@@ -10,3 +10,4 @@
 
 - 成功ssh
 - 试试sourcetree
+- ssh 查看是否需要输入密码
