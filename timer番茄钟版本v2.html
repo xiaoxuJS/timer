@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>xiaoxujs计时器</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="box">
+      <div class="alertShow">
+        <div class="alert-show-success">
+          <div class="alert alert-success" role="alert">
+            时间到休息一下吧!
+            <button 
+              id="rest" 
+              class="btn btn-default" 
+              type="submit"
+              onclick="handleRest()"
+            >
+              休息
+            </button>
+            <p class="rest-p">
+              <span class="rest-span-class">05</span>
+              <span class="rest-span-class">:</span>
+              <span class="rest-span-class">00</span>
+            </p>
+          </div>
+        </div>
+        <div class="alert-show-warning">
+          <div class="alert alert-warning" role="alert">暂停了！！！！</div>
+        </div>
+      </div>
+      <h1 class="box-h1">番茄钟计时器</h1>
+      <p class="box-p">
+        <span class="span-class">00</span>
+        <span class="span-class">:</span>
+        <span class="span-class">00</span>
+      </p>
+      <div class="box-button">
+        <button 
+          class="btn btn-default" 
+          type="submit" 
+          onclick="start()"
+        >
+          开始
+        </button>
+        <button 
+          class="btn btn-default" 
+          type="submit" 
+          onclick="stop()"
+        >
+          暂停
+        </button>
+        <button 
+          class="btn btn-default" 
+          type="submit" 
+          onclick="reset()"
+        >
+          重置
+        </button>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

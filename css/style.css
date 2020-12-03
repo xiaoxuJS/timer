@@ -1,0 +1,40 @@
+.box{
+  height:100%;width:100%;
+  /*width: 100%;*/
+  border: 1px solid green;
+  position:fixed;
+  background: black;
+}
+.box-p{
+  font-size: 60px;
+  color: blanchedalmond;
+  /* text-align: center; */
+  font-size: 50px;
+  font-family: 'Consolas';
+}
+.box-button{
+  /* text-align: center; */
+  font-size: 100px;
+}
+.box-h1{
+  color: blanchedalmond;
+  /* width: 100%; */
+  /* margin: 0 auto; */
+  /* text-align: center; */
+  font-size: 30px;
+}
+.alertShow{
+  width: 500px;
+  height: 52px;
+  /* margin: 0 auto; */
+}
+.alert-show-success{
+  display: none;
+}
+.alert-show-warning{
+  display: none;
+}
+#rest {
+  float: right;
+  display: none;
+}
