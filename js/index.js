@@ -2,7 +2,7 @@ let spanValueMinute = document.getElementsByClassName("span-class")[0];
 let spanValueSecond = document.getElementsByClassName("span-class")[2];
 let alertShowSuccess = document.getElementsByClassName("alert-show-success")[0];
 let alertShowWarning = document.getElementsByClassName("alert-show-warning")[0];
-let alertWarning = document.getElementsByClassName("alert-warning")[0];
+let restAlertSuccess = document.getElementById("restAlertSuccess");
 let rest = document.getElementById('rest'); // 休息按钮
 
 var timing;
@@ -18,6 +18,7 @@ function start() {
   if (minute === 25) {
     reset();
   }
+  restAlertSuccess.innerHTML = "时间到休息一下吧!";
   alertShowSuccess.style.display = "none";
   alertShowWarning.style.display = "none";
   clearInterval(timing);
@@ -62,7 +63,7 @@ function handleRest() {
     restSecond--;
     if (restMinute <= 0 && restSecond <= 0) {
       clearInterval(resTtiming);
-      alertWarning.innerHTML = "休息结束";
+      restAlertSuccess.innerHTML = "休息结束";
       alertShowSuccess.style.display = "none";
       alertShowWarning.style.display = "inline";
     }else if(restSecond === 0){
