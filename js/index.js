@@ -1,7 +1,13 @@
+
+//分秒
 let spanValueMinute = document.getElementsByClassName("span-class")[0];
 let spanValueSecond = document.getElementsByClassName("span-class")[2];
+
+//休息一下
 let alertShowSuccess = document.getElementsByClassName("alert-show-success")[0];
+//暂停了
 let alertShowWarning = document.getElementsByClassName("alert-show-warning")[0];
+//
 let restAlertSuccess = document.getElementById("restAlertSuccess");
 let rest = document.getElementById('rest'); // 休息按钮
 
@@ -9,19 +15,19 @@ var timing;
 var resTtiming;
 let minute = 0;
 let second = 0;
-let restMinute = 5;
+let restMinute = 10;
 let restSecond = 60;
 
 
 //开始番茄钟事件
 function start() {
-  if (minute === 25) {
+  if (minute === 50) {
     reset();
   }
   restAlertSuccess.innerHTML = "时间到休息一下吧!";
   alertShowSuccess.style.display = "none";
   alertShowWarning.style.display = "none";
-  restMinute = 5;
+  restMinute = 10;
   restSecond = 60;
   clearInterval(timing);
   timing = setInterval(() => {
@@ -30,7 +36,7 @@ function start() {
       minute++;
       second = 0;
     }
-    if (minute === 25) {
+    if (second === 2) {
       clearInterval(timing);
       alertShowSuccess.style.display = "inline";
       rest.style.display = "inline";
@@ -41,7 +47,7 @@ function start() {
 }
 //暂停
 function stop() {
-  if (minute !== 25) {
+  if (minute !== 50) {
     clearInterval(timing);
     alertShowWarning.style.display = "inline";
   }
